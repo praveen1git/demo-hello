@@ -1,5 +1,5 @@
 pipeline { 
-    agent{ "none" }
+    agent{ label "none" }
     stages{
         stage ('Code Download From SCM'){
             steps{
@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('GOF Docker Run'){
-            agent{ label "any" }
+            agent{ label "none" }
             steps{
                 dir('/home/jenkins'){
                       unstash name: 'Dockerfile'                                                                                           
