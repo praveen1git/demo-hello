@@ -1,5 +1,5 @@
 pipeline { 
-    agent{ }
+    agent{any}
     stages{
         stage ('Code Download From SCM'){
             steps{
